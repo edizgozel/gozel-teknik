@@ -1,0 +1,181 @@
+.doc-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 50;
+  overflow-y: auto;
+  padding: var(--space-6) var(--space-4);
+}
+
+.doc-actions {
+  max-width: 720px;
+  margin: 0 auto var(--space-3);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.doc-note {
+  font-size: var(--font-size-sm);
+  color: #fff;
+}
+
+.doc-paper {
+  max-width: 720px;
+  margin: 0 auto;
+  background: #fff;
+  color: #1c1a19;
+  padding: var(--space-6);
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+.doc-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  border-bottom: 2px solid var(--brand-700);
+  padding-bottom: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.doc-logo {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+}
+
+.doc-title {
+  margin: 0;
+  font-size: 18px;
+  color: var(--brand-800);
+}
+
+.doc-bizinfo {
+  margin: 2px 0 0;
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.doc-subtitle {
+  margin: 0;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.doc-kind {
+  margin-left: auto;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--brand-800);
+  border: 1px solid var(--brand-700);
+  border-radius: 3px;
+  padding: 4px 10px;
+}
+
+.doc-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: var(--space-4);
+}
+
+.doc-table th,
+.doc-table td {
+  border: 1px solid var(--border);
+  padding: 6px 8px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.doc-table th {
+  width: 200px;
+  background: var(--surface-alt);
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.doc-lines td.money {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.doc-total th,
+.doc-total td {
+  font-weight: 700;
+  background: var(--brand-50);
+}
+
+.doc-heading {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--brand-800);
+  margin: var(--space-4) 0 var(--space-2);
+}
+
+.doc-muted {
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.doc-signatures {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+}
+
+.sig-box {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 220px;
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.sig-line {
+  border-bottom: 1px solid var(--border-strong);
+  height: 40px;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .print-document,
+  .print-document * {
+    visibility: visible;
+  }
+
+  .doc-overlay {
+    position: static;
+    background: none;
+    padding: 0;
+    overflow: visible;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .doc-paper {
+    max-width: none;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  .doc-table,
+  .doc-heading {
+    page-break-inside: avoid;
+  }
+
+  .doc-table tr {
+    page-break-inside: avoid;
+  }
+}

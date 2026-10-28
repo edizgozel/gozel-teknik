@@ -1,0 +1,224 @@
+.topnav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--nav-bg);
+  border-bottom: 1px solid var(--nav-border);
+}
+
+.topnav-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--space-4);
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+/* Marka alanı */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding-right: var(--space-4);
+  border-right: 1px solid var(--nav-border);
+  flex-shrink: 0;
+}
+
+.brand-logo {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  display: block;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.brand-name {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--nav-text);
+  line-height: 1.15;
+}
+
+.brand-sub {
+  font-weight: 400;
+  color: var(--nav-accent);
+}
+
+.brand-tag {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--nav-text-dim);
+  line-height: 1.15;
+}
+
+/* Menü */
+.nav-items {
+  flex: 1;
+  min-width: 0;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 11px;
+  height: calc(var(--nav-height) - 8px);
+  margin-top: 8px;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: var(--nav-text-dim);
+  text-decoration: none;
+  border-radius: 5px 5px 0 0;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+  cursor: default;
+}
+
+a.nav-link {
+  cursor: pointer;
+}
+
+a.nav-link:hover {
+  color: var(--nav-text);
+  background: var(--nav-hover);
+}
+
+a.nav-link:focus-visible {
+  outline: 2px solid var(--nav-accent);
+  outline-offset: -2px;
+}
+
+.nav-link-active {
+  color: var(--nav-text);
+  font-weight: 600;
+  border-bottom-color: var(--nav-accent);
+  background: var(--nav-active);
+}
+
+.nav-link-active .nav-icon {
+  color: var(--nav-accent);
+  opacity: 1;
+}
+
+.nav-icon {
+  flex-shrink: 0;
+  opacity: 0.85;
+}
+
+.nav-badge,
+.nav-dot {
+  flex-shrink: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--border-strong);
+  margin-left: 2px;
+}
+
+.nav-link-planned .nav-icon {
+  opacity: 0.45;
+}
+
+.nav-link-planned:hover {
+  background: none;
+}
+
+/* Sağ yardımcı alan */
+.nav-side {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.nav-version {
+  font-size: var(--font-size-sm);
+  color: var(--nav-text-dim);
+}
+
+/* Dar ekran */
+.nav-toggle {
+  display: none;
+  margin-left: auto;
+  background: none;
+  border: 1px solid var(--nav-border);
+  border-radius: 4px;
+  padding: 6px 8px;
+  color: var(--nav-text);
+  cursor: pointer;
+}
+
+@media (max-width: 1180px) {
+  .nav-side {
+    display: none;
+  }
+}
+
+@media (max-width: 960px) {
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  .nav-items {
+    display: none;
+  }
+
+  .nav-items-open {
+    display: block;
+    position: absolute;
+    top: var(--nav-height);
+    left: 0;
+    right: 0;
+    background: var(--nav-bg);
+    border-bottom: 1px solid var(--nav-border);
+  }
+
+  .nav-items-open .nav-list {
+    flex-direction: column;
+    align-items: stretch;
+    padding: var(--space-2) 0;
+  }
+
+  .nav-items-open .nav-link {
+    height: 46px;
+    margin-top: 0;
+    border-radius: 0;
+    border-bottom: none;
+    padding: 0 var(--space-5);
+  }
+
+  .nav-items-open .nav-link-active {
+    border-bottom: none;
+    border-left: 3px solid var(--nav-accent);
+  }
+
+  .brand-tag {
+    display: none;
+  }
+
+  .nav-side {
+    display: none;
+  }
+
+  .brand {
+    padding-right: 0;
+    border-right: none;
+  }
+}

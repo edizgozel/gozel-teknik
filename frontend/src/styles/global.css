@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-md);
+  color: var(--text-primary);
+  background: var(--page-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.page-inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+}
+
+/* ---- Ortak form kontrolleri ---- */
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: var(--font-size-md);
+  color: var(--text-primary);
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  border-radius: 5px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input:not([type]),
+input[type="password"] {
+  height: 36px;
+  padding: 0 10px;
+}
+
+input[type="date"],
+input[type="datetime-local"] {
+  height: 36px;
+  padding: 0 8px;
+}
+
+select {
+  height: 36px;
+  padding: 0 30px 0 10px;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%235c5551' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  cursor: pointer;
+  text-overflow: ellipsis;
+}
+
+select option {
+  font-size: var(--font-size-md);
+  color: var(--text-primary);
+  padding: 6px;
+  background: var(--surface);
+}
+
+textarea {
+  min-height: 64px;
+  padding: 8px 10px;
+  resize: vertical;
+}
+
+input:hover:not(:focus):not(:disabled),
+select:hover:not(:focus):not(:disabled),
+textarea:hover:not(:focus):not(:disabled) {
+  border-color: var(--text-muted);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--accent-600);
+  box-shadow: 0 0 0 3px var(--accent-100);
+}
+
+input:disabled,
+select:disabled,
+textarea:disabled {
+  background: var(--surface-alt);
+  color: var(--text-muted);
+  cursor: not-allowed;
+  border-color: var(--border);
+}
+
+input[readonly] {
+  background: var(--surface-alt);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-muted);
+  opacity: 1;
+}
+
+input[type="file"] {
+  padding: 6px 8px;
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
+input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--brand-700);
+  cursor: pointer;
+}
+
+@media (max-width: 720px) {
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  input[type="number"],
+  input:not([type]),
+  input[type="date"],
+  input[type="datetime-local"],
+  select {
+    height: 42px;
+    font-size: 16px;
+  }
+
+  textarea {
+    min-height: 80px;
+  }
+}
+
+.page-title {
+  letter-spacing: -0.01em;
+}

@@ -1,0 +1,8 @@
+fastapi==0.119.1
+uvicorn[standard]==0.38.0
+sqlalchemy==2.0.44
+pydantic-settings==2.11.0
+email-validator==2.2.0
+fpdf2==2.8.2
+pytest==8.4.2
+httpx==0.28.1

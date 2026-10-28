@@ -1,0 +1,6 @@
+/* Müşteri detay sayfası; ortak stiller modules.css içinde */
+
+.page-header .chip {
+  vertical-align: middle;
+  margin-left: var(--space-2);
+}

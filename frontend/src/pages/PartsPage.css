@@ -1,0 +1,39 @@
+/* Stok modülü; ortak stiller modules.css içinde */
+
+.part-sub {
+  color: var(--text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.movement-type-label {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 1px 6px;
+}
+
+.stock-adjust-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: var(--space-3);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--border);
+}
+
+.stock-adjust-row .form-field {
+  flex: 1 1 160px;
+}
+
+@media (max-width: 720px) {
+  .stock-adjust-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .stock-adjust-row .btn {
+    min-height: 40px;
+  }
+}

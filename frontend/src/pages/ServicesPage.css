@@ -1,0 +1,200 @@
+/* Servis modülü stilleri; ortak düzen modules.css içinde */
+
+.module-toolbar input[type="date"] {
+  flex: 0 0 auto;
+}
+
+.success-strip {
+  border-left-color: var(--success-700);
+}
+
+.success-strip .status-dot {
+  background: var(--success-700);
+}
+
+/* Durum etiketleri */
+.status-chip {
+  display: inline-block;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+.status-chip.tone-info {
+  color: var(--brand-800);
+  background: var(--brand-50);
+  border-color: var(--brand-100);
+}
+
+.status-chip.tone-warn {
+  color: var(--warning-700);
+  background: var(--warning-100);
+}
+
+.status-chip.tone-ok {
+  color: var(--success-700);
+  background: var(--success-100);
+}
+
+.status-chip.tone-done {
+  color: var(--text-secondary);
+  background: var(--surface-alt);
+  border-color: var(--border);
+}
+
+.status-chip.tone-bad {
+  color: var(--danger-700);
+  background: var(--danger-100);
+}
+
+.status-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
+.section-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+
+.section-head h2 {
+  margin: 0;
+}
+
+.repair-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: var(--space-3);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--border);
+}
+
+.repair-form .form-field {
+  flex: 2 1 220px;
+}
+
+.repair-form .form-field:nth-child(2) {
+  flex: 1 1 160px;
+}
+
+.repair-form .btn {
+  min-height: 36px;
+}
+
+.repair-action {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+/* Finans paneli */
+.finance-rows {
+  grid-template-columns: 220px 1fr;
+}
+
+.finance-rows .money {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.finance-rows .total-row {
+  font-weight: 700;
+  color: var(--brand-800);
+  border-top: 1px solid var(--border-strong);
+  padding-top: var(--space-2);
+  margin-top: var(--space-1);
+}
+
+.sub-heading {
+  margin: var(--space-4) 0 var(--space-2);
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.refund-box {
+  margin-top: var(--space-3);
+  padding: var(--space-3);
+  background: var(--warning-100);
+  border: 1px solid var(--warning-700);
+  border-radius: 4px;
+  font-size: var(--font-size-md);
+}
+
+.refund-box .stock-adjust-row {
+  margin-top: var(--space-3);
+}
+
+@media (max-width: 720px) {
+  .finance-rows {
+    grid-template-columns: 1fr auto;
+  }
+}
+
+/* Geçmiş listesi */
+.history-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.history-item {
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.history-item:last-child {
+  border-bottom: none;
+}
+
+.history-line {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.history-arrow {
+  color: var(--text-muted);
+}
+
+.history-time {
+  font-size: var(--font-size-sm);
+  color: var(--text-muted);
+  margin-left: auto;
+}
+
+.history-note {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}
+
+@media (max-width: 720px) {
+  .module-toolbar input[type="date"] {
+    width: 100%;
+  }
+
+  .history-time {
+    margin-left: 0;
+  }
+
+  .repair-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .section-head {
+    flex-wrap: wrap;
+  }
+}

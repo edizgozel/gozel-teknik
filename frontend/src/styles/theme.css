@@ -1,0 +1,60 @@
+/*
+  GOZEL TEKNİK — merkezi tema değişkenleri
+  Palet: koyu bordo (marka), kırmızı (vurgu), nötr griler, yeşil/amber (durum)
+*/
+:root {
+  /* Üst navigasyon (koyu bordo) */
+  --nav-bg: #401b29;
+  --nav-border: #5a2a3c;
+  --nav-text: #f7f3f4;
+  --nav-text-dim: #d8c5cb;
+  --nav-accent: #e0506d;
+  --nav-active: #633044;
+  --nav-hover: #4d2233;
+
+  /* Marka */
+  --brand-900: #4a0e1c;
+  --brand-800: #5e1224;
+  --brand-700: #74172d;
+  --brand-600: #8c1d38;
+  --brand-100: #f7e6ea;
+  --brand-50: #fbf2f4;
+
+  --accent-600: #c81e3c;
+  --accent-100: #fbe3e8;
+
+  /* Nötr yüzeyler ve metin */
+  --surface: #ffffff;
+  --surface-alt: #f6f5f4;
+  --page-bg: #f1efee;
+  --border: #dedad8;
+  --border-strong: #c9c4c1;
+
+  --text-primary: #26221f;
+  --text-secondary: #5c5551;
+  --text-muted: #8a827d;
+
+  /* Durum renkleri */
+  --success-700: #1e7145;
+  --success-100: #e2f2e8;
+  --warning-700: #8a5a00;
+  --warning-100: #fdf0d3;
+  --danger-700: #a31226;
+  --danger-100: #fbe3e8;
+
+  /* Ölçüler */
+  --nav-height: 56px;
+  --content-max: 1200px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-8: 48px;
+
+  --font-sans: "Segoe UI", "Segoe UI Variable Text", Tahoma, Arial, sans-serif;
+  --font-size-sm: 12.5px;
+  --font-size-md: 14px;
+  --font-size-lg: 16px;
+}

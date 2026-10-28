@@ -1,0 +1,27 @@
+/* Ayarlar sayfası */
+
+.msg-ok {
+  margin-bottom: var(--space-3);
+}
+
+.restore-warning {
+  background: var(--warning-100);
+  border: 1px solid var(--warning-700);
+  border-radius: 4px;
+  padding: var(--space-3);
+  font-size: var(--font-size-md);
+  color: var(--text-primary);
+  margin-bottom: var(--space-3);
+}
+
+.restore-section {
+  border-left: 3px solid var(--warning-700);
+}
+
+code {
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 1px 5px;
+  font-size: var(--font-size-sm);
+}

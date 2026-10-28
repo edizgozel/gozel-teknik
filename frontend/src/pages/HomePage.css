@@ -1,0 +1,135 @@
+.page {
+  padding: var(--space-6) var(--space-5) var(--space-8);
+}
+
+.page-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--brand-700);
+  padding-bottom: var(--space-4);
+  margin-bottom: var(--space-5);
+}
+
+.page-title {
+  margin: 0 0 var(--space-1);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.page-subtitle {
+  margin: 0;
+  max-width: 640px;
+  font-size: var(--font-size-md);
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+/* Sistem durumu şeridi */
+.status-strip {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--brand-700);
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--font-size-md);
+  margin-bottom: var(--space-6);
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--success-700);
+}
+
+.status-dot[data-state="bad"] {
+  background: var(--danger-700);
+}
+
+.status-label {
+  color: var(--text-secondary);
+}
+
+.status-value {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+/* Modül planı */
+.section-title {
+  margin: 0 0 var(--space-1);
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.section-note {
+  margin: 0 0 var(--space-4);
+  font-size: var(--font-size-sm);
+  color: var(--text-muted);
+}
+
+.module-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  font-size: var(--font-size-md);
+}
+
+.module-table th,
+.module-table td {
+  text-align: left;
+  padding: 10px var(--space-4);
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+.module-table thead th {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  background: var(--surface-alt);
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.module-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.module-table tbody tr:hover {
+  background: var(--brand-50);
+}
+
+.module-name {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.module-name svg {
+  color: var(--brand-700);
+}
+
+.module-desc {
+  color: var(--text-secondary);
+}
+
+.status-chip {
+  display: inline-block;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 3px;
+  color: var(--text-secondary);
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+}
